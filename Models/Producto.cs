@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -33,5 +34,7 @@ namespace PC3_PrograTeoria.Models
         [Required]
         [Display(Name="Nombre del Usuario")]
         public string userProduct { get; set;}
+
+        public DateTime Date { get { return DateTime.Now; } }
     }
 }

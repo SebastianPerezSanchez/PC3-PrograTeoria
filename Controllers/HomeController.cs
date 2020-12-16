@@ -20,13 +20,17 @@ namespace PC3_PrograTeoria.Controllers
 
         public HomeController(ILogger<HomeController> logger, BuscoContext context)
         {
+
             _logger = logger;
             _context = context;            
         }
 
         public IActionResult Index()
         {
-            var productos = _context.Productos.ToList();
+            DateTime fechaComparar = DateTime.Now;
+            fechaComparar = fechaComparar.AddDays(-7);
+
+            var productos = _context.Productos.Where(x => x.Date > fechaComparar).ToList();
             return View(productos);
         }
 
