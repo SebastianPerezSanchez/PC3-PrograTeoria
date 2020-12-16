@@ -1,0 +1,60 @@
+@model Producto;
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+<p>
+ <button class="btn btn-primary" onclick="window.location='@Url.Action("Index", "Home")'">Atras</button>
+ </p>
+
+    <section class="jumbotron text-center">
+
+
+        <img class="card-img-top" src="@Html.DisplayFor(model => model.urlProduct)" style="height: 250px; width: 300px;">
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.nameProduct)
+        </div>
+        <div class="display-field" >
+            @Html.DisplayFor(model => model.nameProduct)
+        </div>
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.describeProduct)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.describeProduct)
+        </div>
+
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.priceProduct)
+        </div>
+        <div class="display-field">
+            S/.@Html.DisplayFor(model => model.priceProduct)
+        </div>
+
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.phoneProduct)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.phoneProduct)
+        </div>
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.placeProduct)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.placeProduct)
+        </div>
+
+
+        <div class="display-label" style="font-weight:bold;">
+            @Html.DisplayNameFor(model => model.userProduct)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.userProduct)
+        </div>
+    
+    </section>
